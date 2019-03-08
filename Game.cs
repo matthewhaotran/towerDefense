@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace Sharp2
+namespace TreehouseDefense
 {
-    class Program
+    class Game
     {
-        static void Main(string[] args)
+        public void Main()
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
