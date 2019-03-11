@@ -9,5 +9,15 @@ namespace TreehouseDefense
             X = x;
             Y = y;
         }
+
+        public int DistanceTo (int x, int y)
+        {
+            int xDiff = X - x;
+            int yDiff = Y - y;
+
+            int xDiffSquare = xDiff * xDiff;
+            int yDiffSquare = yDiff * yDiff;
+            
+        }
     }
 }
