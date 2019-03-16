@@ -7,10 +7,14 @@ namespace TreehouseDefense
         public static void Main()
         {
             Map map = new Map(8, 5);
-            
-            Point point = new Point(4, 2);
-            
-            Console.WriteLine(point.DistanceTo(5,5));
+
+            try{
+            MapLocation mapLocation = new MapLocation(20, 20, map);
+            }
+            catch(Exception)
+            {
+                Console.WriteLine("That map location is not on the map!");
+            }
         }
     }
 }
