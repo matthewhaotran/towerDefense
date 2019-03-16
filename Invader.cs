@@ -15,16 +15,10 @@ namespace TreehouseDefense
 
         public bool isActive => !(isNeutralized || HasScored);
 
-        public Invader(Path path)
-        {
-            _path = path;
-        }
+        public Invader(Path path) { _path = path; }
 
         public void Move() => _pathStep += 1;
 
-        public void DecreateHealth(int factor)
-        {
-            Health -= factor;
-        }
+        public void DecreateHealth(int factor) => Health -= factor;
     }
 }
