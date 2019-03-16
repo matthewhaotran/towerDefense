@@ -22,11 +22,10 @@ namespace TreehouseDefense
                     new MapLocation(7, 2, map)
                 });
 
-                MapLocation location = path.GetLocationAt(0);
-                if(location != null)
-                {
-                    Console.WriteLine(location.X + "," + location.Y);
-                }
+                Invader invader = new Invader();
+                MapLocation location = new MapLocation(0, 0, map);
+
+                invader.Location = location;
             }
             catch(OutOfBoundsException ex)
             {
