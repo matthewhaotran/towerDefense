@@ -13,7 +13,11 @@ namespace TreehouseDefense
         {
             foreach (Invader invader in invaders)
             {
-
+                if(invader.isActive && _location.InRangeOf(invader.Location, 1))
+                {
+                    invader.DecreateHealth(1);
+                    break;
+                }
             }
         }
     }
