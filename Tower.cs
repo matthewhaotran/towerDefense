@@ -11,13 +11,9 @@ namespace TreehouseDefense
 
         public void FireOnInvaders(Invader[] invaders)
         {
-            int index = 0;
-            while(index < invaders.Length)
+            foreach (Invader invader in invaders)
             {
-                Invader invader = invaders[index];
-                //Do stuff with invdader
 
-                index++;
             }
         }
     }
