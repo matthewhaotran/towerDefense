@@ -4,6 +4,9 @@ namespace TreehouseDefense
     {
         private readonly MapLocation _location;
 
+        private const int _range = 1;
+        private const int _power = 1;
+
         public Tower(MapLocation location)
         {
             _location = location;
@@ -11,11 +14,13 @@ namespace TreehouseDefense
 
         public void FireOnInvaders(Invader[] invaders)
         {
+            
+
             foreach (Invader invader in invaders)
             {
-                if(invader.isActive && _location.InRangeOf(invader.Location, 1))
+                if(invader.isActive && _location.InRangeOf(invader.Location, _power))
                 {
-                    invader.DecreateHealth(1);
+                    invader.DecreateHealth(_range);
                     break;
                 }
             }
