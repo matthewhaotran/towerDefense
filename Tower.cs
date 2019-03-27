@@ -32,7 +32,6 @@ namespace TreehouseDefense
                 {
                     if(isSuccessfulShot())
                     {
-                        Console.WriteLine("Successful Shot!");
                         invader.DecreateHealth(_range);
 
                         if(invader.isNeutralized)
