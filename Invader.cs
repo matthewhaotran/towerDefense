@@ -19,6 +19,10 @@ namespace TreehouseDefense
 
         public void Move() => _pathStep += 1;
 
-        public void DecreateHealth(int factor) => Health -= factor;
+        public virtual void DecreateHealth(int factor) 
+        {
+            Health -= factor;
+            System.Console.WriteLine("Successful Shot!");
+        }
     }
 }
