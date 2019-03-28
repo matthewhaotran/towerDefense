@@ -4,6 +4,7 @@ namespace TreehouseDefense
     {
         private readonly Path _path;
         private int _pathStep = 0;
+        protected virtual int StepSize { get;} = 1;
 
         public MapLocation Location => _path.GetLocationAt(_pathStep);
 
@@ -17,7 +18,7 @@ namespace TreehouseDefense
 
         public Invader(Path path) { _path = path; }
 
-        public void Move() => _pathStep += 1;
+        public void Move() => _pathStep += StepSize;
 
         public virtual void DecreateHealth(int factor) 
         {
