@@ -1,9 +1,10 @@
-namespace TreehouseDefense {
-    class Level 
+namespace TreehouseDefense
+{
+    class Level
     {
         private Invader[] _invaders;
 
-        public Tower[] Towers {get; set;}
+        public Tower[] Towers { get; set; }
 
         public Level(Invader[] invaders)
         {
@@ -14,20 +15,20 @@ namespace TreehouseDefense {
         {
             int remainingInvaders = _invaders.Length;
 
-            while(remainingInvaders > 0)
+            while (remainingInvaders > 0)
             {
-                foreach(Tower tower in Towers)
+                foreach (Tower tower in Towers)
                 {
                     tower.FireOnInvaders(_invaders);
                 }
 
                 remainingInvaders = 0;
-                foreach(Invader invader in _invaders)
+                foreach (Invader invader in _invaders)
                 {
-                    if(invader.isActive)
+                    if (invader.isActive)
                     {
                         invader.Move();
-                        if(invader.HasScored)
+                        if (invader.HasScored)
                         {
                             return false;
                         }

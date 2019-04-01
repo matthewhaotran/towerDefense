@@ -24,22 +24,22 @@ namespace TreehouseDefense
 
         public void FireOnInvaders(Invader[] invaders)
         {
-            
+
 
             foreach (Invader invader in invaders)
             {
-                if(invader.isActive && _location.InRangeOf(invader.Location, _power))
+                if (invader.isActive && _location.InRangeOf(invader.Location, _power))
                 {
-                    if(isSuccessfulShot())
+                    if (isSuccessfulShot())
                     {
                         invader.DecreateHealth(_range);
-
-                        if(invader.isNeutralized)
+                        if (invader.isNeutralized)
                         {
                             Console.WriteLine("Invader has been neutralized");
                         }
                     }
-                    else{
+                    else
+                    {
                         Console.WriteLine("Missed!");
                     }
                     break;

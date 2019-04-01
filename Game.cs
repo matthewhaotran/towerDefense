@@ -11,7 +11,7 @@ namespace TreehouseDefense
             try
             {
                 Path path = new Path(
-                    new [] {
+                    new[] {
                     new MapLocation(0, 2, map),
                     new MapLocation(1, 2, map),
                     new MapLocation(2, 2, map),
@@ -44,18 +44,18 @@ namespace TreehouseDefense
 
                 bool playerWon = level.Play();
 
-                Console.WriteLine("Player " + (playerWon? "won" : "lost"));
-                
+                Console.WriteLine("Player " + (playerWon ? "won" : "lost"));
+
             }
-            catch(OutOfBoundsException ex)
+            catch (OutOfBoundsException ex)
             {
                 Console.WriteLine(ex.Message);
             }
-            catch(TreehouseDefenseException)
+            catch (TreehouseDefenseException)
             {
                 Console.WriteLine("Unhandled TreehouseDefenseException");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine("Unhandled Exception" + ex);
             }

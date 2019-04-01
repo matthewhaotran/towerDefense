@@ -4,7 +4,7 @@ namespace TreehouseDefense
     {
         private readonly Path _path;
         private int _pathStep = 0;
-        protected virtual int StepSize { get;} = 1;
+        protected virtual int StepSize { get; } = 1;
 
         public MapLocation Location => _path.GetLocationAt(_pathStep);
 
@@ -20,7 +20,7 @@ namespace TreehouseDefense
 
         public void Move() => _pathStep += StepSize;
 
-        public virtual void DecreateHealth(int factor) 
+        public virtual void DecreateHealth(int factor)
         {
             Health -= factor;
             System.Console.WriteLine("Successful Shot!");
