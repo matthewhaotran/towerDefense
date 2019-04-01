@@ -33,6 +33,7 @@ namespace TreehouseDefense
                 {
                     new Tower(new MapLocation(1,3,map)),
                     new Tower(new MapLocation(3,3,map)),
+                    new Tower(new MapLocation(4,3,map)),
                     new Tower(new MapLocation(5,3,map))
                 };
 
